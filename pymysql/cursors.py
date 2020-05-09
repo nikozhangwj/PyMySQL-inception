@@ -408,7 +408,7 @@ class SSCursor(Cursor):
         if conn is None:
             return
 
-        if self._result is not None and self._result is conn._result:
+        if self._result:
             self._result._finish_unbuffered_query()
 
         try:
